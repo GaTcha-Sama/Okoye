@@ -10,6 +10,9 @@ export const Navbar = () => {
           <Image src="/images/okoye-logo.jpg" alt="Okoyé" width={100} height={100} />
         </Link>
       </div>
+      <div>
+        <Image src="/images/okoye-titre.png" alt="Okoyé" width={250} height={100} />
+      </div>
       <div className="flex gap-4">
         <Link href="/">Accueil</Link>
         <Link href="/about">À propos</Link>

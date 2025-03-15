@@ -2,8 +2,28 @@ import { Navbar } from "./components/navbar";
 import { Footer } from "./components/footer";
 import Image from "next/image";
 import Link from "next/link";
+import { Carousel } from "./components/carousel";
 
 export default function Home() {
+    const CarouselImages = [
+    {
+      src: "/images/okoye-carousel-2.jpg",
+      alt: "Produits Africains"
+    },
+    {
+      src: "/images/okoye-carousel-1.jpg",
+      alt: "Marchés Traditionnels Africains"
+    },
+    {
+      src: "/images/okoye-carousel-4.jpg",
+      alt: "Produits Antillais"
+    },
+    {
+      src: "/images/okoye-carousel-5.jpg",
+      alt: "Marchés Traditionnels Antillais"
+    }
+  ];
+
   const categories = [
     {
       title: "Épices",
@@ -25,17 +45,9 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-amber-50 to-orange-100">
       <Navbar />
-      
-      {/* Hero Section */}
       <div className="relative h-[600px] flex items-center justify-center">
         <div className="absolute inset-0 bg-black/40 z-10" />
-        <Image 
-          src="/images/okoye-illustration.png"
-          alt="okoye" 
-          fill
-          style={{ objectFit: 'contain' }}
-          priority
-        />
+        <Carousel images={CarouselImages} />
         <div className="relative z-20 text-center space-y-6 max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold text-white">
             Bienvenue sur Okoyé
