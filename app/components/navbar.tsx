@@ -11,9 +11,10 @@ export const Navbar = () => {
         </Link>
       </div>
       <div>
-        <Image src="/images/okoye-titre.png" alt="Okoyé" width={250} height={100} />
+        <Image src="/images/okoye-titre.png" alt="Okoyé" width={220} height={100} />
       </div>
       <div className="flex gap-4">
+        <Link href="/basket" className="text-amber-600">Mon panier (0)</Link>
         <Link href="/">Accueil</Link>
         <Link href="/about">À propos</Link>
         <Link href="/contact">Contact</Link>

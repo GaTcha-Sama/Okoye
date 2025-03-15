@@ -2,7 +2,19 @@ import React from 'react';
 import { Navbar } from '../components/navbar';
 import { Footer } from '../components/footer';
 
-const ProductSection = ({ title, products }) => (
+type Product = {
+  name: string;
+  description: string;
+  price: number;
+  image: string;
+}
+
+type ProductSectionProps = {
+  title: string;
+  products: Product[];
+}
+
+const ProductSection = ({ title, products }: ProductSectionProps) => (
   <div className="mb-12">
     <h2 className="text-2xl font-bold mb-6 text-gray-800">{title}</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
